@@ -1,4 +1,4 @@
-# Altruist
+# Altruist WordPress Theme
 
 ![](screenshot.png?raw=true)
 
