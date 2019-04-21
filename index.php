@@ -50,7 +50,7 @@
     </nav>
   </header>
 
-  <main class="">
+  <main id="main">
     <div class="container">
       <p>asdf</p>
       <p>asdf</p>
