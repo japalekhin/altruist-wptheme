@@ -1,5 +1,7 @@
 # Altruist
 
+![](screenshot.png?raw=true)
+
 **Altruist** is a free WordPress theme for semi-personal, semi-professional developer blogs with a focus on the concept of **honorware**.
 
 Suited for those guys who like to help people and offer free software and content, only asking people to:
