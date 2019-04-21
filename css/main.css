@@ -1,3 +1,4 @@
+/* globals */
 body {
   font-family: 'Lora', serif;
 }
@@ -5,6 +6,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Cabin', sans-serif;
 }
 
+/* header */
 #header {
   font-family: 'Cabin', sans-serif;
 }
@@ -16,10 +18,14 @@ h1, h2, h3, h4, h5, h6 {
   filter: none;
 }
 
+/* main section */
 #main {
   margin-top: 4rem;
 }
 
+/* footer section */
+
+/* article related - single/page */
 .article-container {
   margin: auto;
   max-width: 44rem;
