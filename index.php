@@ -14,7 +14,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="<?php echo home_url(); ?>">
-          <img alt="<?php bloginfo('name'); ?>" src="https://www.gravatar.com/avatar/b67403727ea18e05af2557dc8542b37b?s=160&d=mm" width="40" height="40" class="mr-1" />
+          <img alt="<?php bloginfo('name'); ?>" src="https://www.gravatar.com/avatar/b67403727ea18e05af2557dc8542b37b?s=160&d=mm" width="40" height="40" class="rounded-circle mr-1" />
           <?php bloginfo('name'); ?>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,7 +34,7 @@
               'walker' => new WP_Bootstrap_Navwalker(),
             ]);
           ?>
-          <ul class="nav navbar-nav d-flex flex-row my-2 my-lg-auto ml-auto mr-lg-2">
+          <ul class="nav navbar-nav d-flex flex-row mb-3 my-lg-auto ml-auto mr-lg-2">
             <li class="nav-item mx-1">
               <a href="https://github.com/japalekhin" target="_blank" title="GitHub">
                 <img alt="GitHub" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-github.svg" width="32" height="32" />
@@ -76,10 +76,10 @@
               </a>
             </li>
           </ul>
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav mb-3 mb-lg-auto">
             <li class="nav-item">
               <a href="https://www.patreon.com/bePatron?u=6507717" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo home_url(); ?>/wp-content/uploads/2019/03/become-patron-button.png" alt="Become a patron" width="170" height="40">
+                <img src="<?php echo home_url(); ?>/wp-content/uploads/2019/03/become-patron-button.png" alt="Become a patron" width="170" height="40" class="rounded">
               </a>
             </li>
           </ul>
@@ -90,36 +90,14 @@
 
   <main id="main">
     <div class="container">
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
-      <p>asdf</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mollis tristique lectus eget consectetur.</p>
+      <p>Quisque semper quam sed euismod rutrum. Phasellus ut tortor urna. Aenean sed iaculis nisl. Fusce vel nulla pharetra, finibus lectus eleifend, egestas arcu. Integer dapibus mollis felis ac imperdiet.</p>
+      <p>Proin vitae dui accumsan eros venenatis ullamcorper.</p>
+      <p>Duis nunc ante, condimentum quis dolor a, malesuada dictum velit. Fusce volutpat sed nisl nec laoreet.</p>
+      <p>Curabitur ac ullamcorper dui, gravida congue nibh. Integer et bibendum tellus. Nulla interdum aliquet imperdiet. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse condimentum sodales pulvinar.</p>
+      <p>Vestibulum scelerisque nulla ac nisi pretium malesuada. Quisque eu turpis libero. Nam malesuada venenatis justo. Duis dolor quam, ultricies vitae rhoncus at, efficitur eget tellus. Vestibulum dapibus lacus ac justo dignissim, non vulputate lacus elementum. Morbi pharetra justo quis lectus pretium porta eget non arcu. Mauris justo ex, tempus et tempor sit amet, tristique ac nisl. Vivamus ligula elit, dictum a rutrum eget, luctus non turpis. Suspendisse nec mauris eu felis varius cursus in id sem. Donec mauris odio, pellentesque id massa sit amet, malesuada sollicitudin ligula.</p>
+      <p>Donec convallis, odio sed ornare viverra, nisl risus sollicitudin ante, vel dignissim nulla turpis a ligula. Curabitur non iaculis diam. Nam vel lacinia purus, in ornare magna. Duis hendrerit turpis arcu, eget maximus odio rhoncus a. Donec vestibulum mattis convallis. Nullam ex felis, porttitor sit amet lorem vitae, scelerisque lacinia nisi. Ut convallis cursus condimentum. In hac habitasse platea dictumst. Nulla egestas et arcu ut iaculis. Mauris ante velit, laoreet et neque sit amet, sagittis sodales ex. Nam condimentum accumsan tempor.</p>
+      <p>Vestibulum non posuere elit, ut varius lorem. Donec sed quam a eros sodales tempor nec sit amet odio. Maecenas a tincidunt tortor, eu faucibus nisl. Donec hendrerit velit ac pellentesque faucibus.</p>
     </div>
   </main>
 
