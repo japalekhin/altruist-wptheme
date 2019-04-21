@@ -10,7 +10,7 @@
 </head>
 
 <body class="d-flex flex-column h-100">
-  <header class="fixed-top bg-dark">
+  <header id="header" class="fixed-top bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="<?php echo home_url(); ?>">
@@ -34,7 +34,7 @@
               'walker' => new WP_Bootstrap_Navwalker(),
             ]);
           ?>
-          <ul class="nav navbar-nav d-flex flex-row mb-3 my-lg-auto ml-auto mr-lg-2">
+          <ul class="nav navbar-nav nav-social d-flex flex-row mb-3 my-lg-auto ml-auto mr-lg-2">
             <li class="nav-item mx-1">
               <a href="https://github.com/japalekhin" target="_blank" title="GitHub">
                 <img alt="GitHub" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-github.svg" width="32" height="32" />

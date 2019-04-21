@@ -1,3 +1,21 @@
+body {
+  font-family: 'Lora', serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cabin', sans-serif;
+}
+
+#header {
+  font-family: 'Cabin', sans-serif;
+}
+#header .nav-social .nav-item {
+  filter: saturate(.45);
+  transition: filter .25s;
+}
+#header .nav-social .nav-item:hover {
+  filter: none;
+}
+
 #main {
   margin-top: 4rem;
 }
