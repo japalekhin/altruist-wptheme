@@ -43,3 +43,19 @@ add_filter('show_admin_bar', '__return_false');
 add_filter('excerpt_more', function ($more) {
   return '&hellip;';
 });
+
+// drop cap calculator
+add_filter('the_content', function($content) {
+  if (!is_single()) return $content;
+
+  $explodedContent = explode(' ', $content);
+  if (count($explodedContent) > 1 && strlen($explodedContent[0]) < 4) {
+    $droppedWord = '<span class="droppedLetters rounded">' . $explodedContent[0] . '</span>';
+    array_shift($explodedContent);
+    $content = $droppedWord . ' ' . implode(' ', $explodedContent);
+  } else {
+    $droppedLetter = '<span class="droppedLetters rounded">' . substr($content, 0, 1) . '</span>';
+    $content = $droppedLetter . substr($content, 1);
+  }
+  return $content;
+}, 1);

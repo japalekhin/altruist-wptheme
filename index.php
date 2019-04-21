@@ -9,4 +9,4 @@
   <p>Donec convallis, odio sed ornare viverra, nisl risus sollicitudin ante, vel dignissim nulla turpis a ligula. Curabitur non iaculis diam. Nam vel lacinia purus, in ornare magna. Duis hendrerit turpis arcu, eget maximus odio rhoncus a. Donec vestibulum mattis convallis. Nullam ex felis, porttitor sit amet lorem vitae, scelerisque lacinia nisi. Ut convallis cursus condimentum. In hac habitasse platea dictumst. Nulla egestas et arcu ut iaculis. Mauris ante velit, laoreet et neque sit amet, sagittis sodales ex. Nam condimentum accumsan tempor.</p>
   <p>Vestibulum non posuere elit, ut varius lorem. Donec sed quam a eros sodales tempor nec sit amet odio. Maecenas a tincidunt tortor, eu faucibus nisl. Donec hendrerit velit ac pellentesque faucibus.</p>
 </div>
-<?php get_header(); ?>
+<?php get_footer(); ?>

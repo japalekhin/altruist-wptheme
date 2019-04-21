@@ -30,6 +30,24 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
   max-width: 44rem;
 }
+.article-header .article-title {
+  font-size: 2.125rem;
+}
+.article-header .article-subtitle {
+  color: #757575;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.5rem;
+}
+.article-header .article-cover img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+@media only screen and (min-width: 62rem) {
+  .article-header .article-cover img {
+    max-width: 64rem;
+  }
+}
 .article-body {
   font-size: 1.125rem;
   line-height: 1.618;
@@ -38,8 +56,21 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
   max-width: 100%;
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 62rem) {
   .article-body {
     font-size: 1.3125rem;
   }
 }
+
+/* single article */
+.article.article-single .article-body .droppedLetters {
+  background-color: #d2dae2;
+  float: left;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 .5rem 0 0;
+  padding: .0625rem .75rem;
+}
+
+/* page article */
