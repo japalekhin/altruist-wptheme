@@ -31,6 +31,13 @@
               'walker' => new WP_Bootstrap_Navwalker(),
             ]);
           ?>
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a href="https://www.patreon.com/bePatron?u=6507717" target="_blank" rel="noopener noreferrer">
+                <img src="<?php echo home_url(); ?>/wp-content/uploads/2019/03/become-patron-button.png" alt="Become a patron" width="200" height="47">
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
