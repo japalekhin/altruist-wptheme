@@ -77,6 +77,13 @@ h1, h2, h3, h4, h5, h6 {
 .article-body h6 {
   margin-top: 1.618em;
 }
+.article-body p {
+  margin-bottom: 1.618em;
+}
+.article-body ul li,
+.article-body ol li {
+  margin-bottom: .618em;
+}
 .article-body img {
   height: auto;
   max-width: 100%;
