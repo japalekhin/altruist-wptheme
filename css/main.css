@@ -38,6 +38,17 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Cabin', sans-serif;
   font-size: 1.5rem;
 }
+.article-header .article-meta {
+  color: #757575;
+}
+.article-header .article-meta .article-meta-item {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.article-header .article-meta a {
+  color: inherit;
+  text-decoration: inherit;
+}
 .article-header .article-cover img {
   height: auto;
   max-width: 100%;
@@ -57,13 +68,6 @@ h1, h2, h3, h4, h5, h6 {
   .article-header .article-cover img {
     max-width: 64rem;
   }
-}
-.article-header .article-meta {
-  color: #757575;
-}
-.article-header .article-meta a {
-  color: inherit;
-  text-decoration: inherit;
 }
 .article-body {
   font-size: 1.125rem;
