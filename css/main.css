@@ -43,17 +43,27 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 100%;
   width: 100%;
 }
+@media only screen and (min-width: 48rem) {
+  .article-header .article-cover img {
+    max-width: 48rem;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  .article-header .article-cover img {
+    max-width: 52rem;
+  }
+}
+@media only screen and (min-width: 75rem) {
+  .article-header .article-cover img {
+    max-width: 64rem;
+  }
+}
 .article-header .article-meta {
   color: #757575;
 }
 .article-header .article-meta a {
   color: inherit;
   text-decoration: inherit;
-}
-@media only screen and (min-width: 62rem) {
-  .article-header .article-cover img {
-    max-width: 64rem;
-  }
 }
 .article-body {
   font-size: 1.125rem;
