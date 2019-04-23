@@ -1,17 +1,19 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
-<header class="article-header">
-  <div class="container">
-    <div class="article-container">
-      <h1 class="article-title"><?php the_title(); ?></h1>
+<div class="article articlePage">
+  <header class="articleHeader">
+    <div class="container">
+      <div class="articleContainer">
+        <h1 class="articleTitle"><?php the_title(); ?></h1>
+      </div>
     </div>
-  </div>
-</header>
-<section class="article-body">
-  <div class="container">
-    <div class="article-container">
-      <?php the_content(); ?>
+  </header>
+  <section class="articleBody">
+    <div class="container">
+      <div class="articleContainer">
+        <?php the_content(); ?>
+      </div>
     </div>
-  </div>
-</section>
-<?php get_footer(); ?>
+  </section>
+  <?php get_footer(); ?>
+</div>

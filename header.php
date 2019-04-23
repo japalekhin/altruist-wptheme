@@ -34,7 +34,7 @@
               'walker' => new WP_Bootstrap_Navwalker(),
             ]);
           ?>
-          <ul class="nav navbar-nav nav-social d-flex flex-row mt-3 mb-3 my-lg-auto ml-auto mr-lg-2">
+          <ul class="nav navbar-nav navSocial d-flex flex-row mt-3 mb-3 my-lg-auto ml-auto mr-lg-2">
             <li class="nav-item mx-1">
               <a href="https://github.com/japalekhin" target="_blank" title="GitHub">
                 <img alt="GitHub" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-github.svg" width="32" height="32" />

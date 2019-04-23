@@ -10,11 +10,11 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   font-family: 'Cabin', sans-serif;
 }
-#header .nav-social .nav-item {
+#header .navSocial .nav-item {
   filter: saturate(.45);
   transition: filter .25s;
 }
-#header .nav-social .nav-item:hover {
+#header .navSocial .nav-item:hover {
   filter: none;
 }
 
@@ -26,80 +26,80 @@ h1, h2, h3, h4, h5, h6 {
 /* footer section */
 
 /* article related - single/page */
-.article-container {
+.articleContainer {
   margin: auto;
   max-width: 44rem;
 }
-.article-header .article-title {
+.articleHeader .articleTitle {
   font-size: 2.125rem;
 }
-.article-header .article-subtitle {
+.articleHeader .articleSubtitle {
   color: #757575;
   font-family: 'Cabin', sans-serif;
   font-size: 1.5rem;
 }
-.article-header .article-meta {
+.articleHeader .articleMeta {
   color: #757575;
 }
-.article-header .article-meta .article-meta-item {
+.articleHeader .articleMeta .articleMetaItem {
   display: inline-block;
   margin-right: 1rem;
 }
-.article-header .article-meta a {
+.articleHeader .articleMeta a {
   color: inherit;
   text-decoration: inherit;
 }
-.article-header .article-cover img {
+.articleHeader .articleCover img {
   height: auto;
   max-width: 100%;
   width: 100%;
 }
 @media only screen and (min-width: 48rem) {
-  .article-header .article-cover img {
+  .articleHeader .articleCover img {
     max-width: 48rem;
   }
 }
 @media only screen and (min-width: 62rem) {
-  .article-header .article-cover img {
+  .articleHeader .articleCover img {
     max-width: 52rem;
   }
 }
 @media only screen and (min-width: 75rem) {
-  .article-header .article-cover img {
+  .articleHeader .articleCover img {
     max-width: 64rem;
   }
 }
-.article-body {
+.articleBody {
   font-size: 1.125rem;
   line-height: 1.618;
 }
-.article-body h1,
-.article-body h2,
-.article-body h3,
-.article-body h4,
-.article-body h5,
-.article-body h6 {
+.articleBody h1,
+.articleBody h2,
+.articleBody h3,
+.articleBody h4,
+.articleBody h5,
+.articleBody h6 {
   margin-top: 1.618em;
 }
-.article-body p {
+.articleBody p {
   margin-bottom: 1.618em;
 }
-.article-body ul li,
-.article-body ol li {
+.articleBody ul li,
+.articleBody ol li {
   margin-bottom: .618em;
 }
-.article-body img {
+.articleBody img {
   height: auto;
   max-width: 100%;
 }
 @media only screen and (min-width: 62rem) {
-  .article-body {
+  .articleBody {
     font-size: 1.3125rem;
   }
 }
 
 /* single article */
-.article.article-single .article-body .droppedLetters {
+.article.articleSingle .articleBody .droppedLetters {
   background-color: #d2dae2;
   float: left;
   font-size: 4rem;
