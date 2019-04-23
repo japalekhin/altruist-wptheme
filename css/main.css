@@ -59,6 +59,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.125rem;
   line-height: 1.618;
 }
+.article-body h1,
+.article-body h2,
+.article-body h3,
+.article-body h4,
+.article-body h5,
+.article-body h6 {
+  margin-top: 1.618em;
+}
 .article-body img {
   height: auto;
   max-width: 100%;
