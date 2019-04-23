@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
 <div class="article articlePage">
-  <header class="articleHeader">
+  <header class="articleHeader pt-4 pt-lg-5 pb-3 mb-5">
     <div class="container">
       <div class="articleContainer">
         <h1 class="articleTitle"><?php the_title(); ?></h1>
