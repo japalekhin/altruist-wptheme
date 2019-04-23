@@ -8,9 +8,11 @@
         <!-- <p class="articleSubtitle">Drawing graphics on the screen is an essential part of developing games. Sure, some text-based games exist but let’s face it, those are too specialized and only a few people understand how good they are (if they are).</p> -->
         <div class="articleMeta pt-2 pb-4">
           <span class="articleMetaItem">
+            <i class="far fa-clock mr-1"></i>
             <?php the_time('l, F j, Y'); ?>
           </span>
           <?php if (comments_open()): ?>
+            <i class="far fa-comments mr-1"></i>
             <span class="commentsLink articleMetaItem">
               <?php comments_popup_link(__('Comment', 'devin'), __('1 Comment', 'devin'), __('% Comments', 'devin')); ?>
             </span>
