@@ -90,6 +90,34 @@ h1, h2, h3, h4, h5, h6 {
 .articleBody p {
   margin-bottom: 1.618em;
 }
+.articleBody p code {
+  background-color: #d2dae2;
+  color: #000;
+  padding: .125rem .25rem;
+}
+.articleBody pre.wp-block-code {
+  margin-left: -.5rem;
+  margin-right: -.5rem;
+  margin-top: -1.75rem;
+}
+@media only screen and (min-width: 36rem) {
+  .articleBody pre.wp-block-code {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  .articleBody pre.wp-block-code {
+    margin-left: -2rem;
+    margin-right: -2rem;
+  }
+}
+.articleBody pre.wp-block-code code {
+  background-color: #d2dae2;
+  color: #000;
+  display: block;
+  padding: .25rem .5rem;
+}
 .articleBody ul li,
 .articleBody ol li {
   margin-bottom: .618em;
