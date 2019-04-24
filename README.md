@@ -10,15 +10,21 @@ Suited for those guys who like to help people and offer free software and conten
 
 This is the next iteration of [Devin'](https://github.com/japalekhin/devin-wp-theme) another free WordPress theme for developers.
 
-## Support
+## 🤗 Support
 
-An example of an honorware is this theme itself. It's free for use by anybody and expect nothing in return.
+An example of an honorware is this project itself. It's free for use by anybody and expect nothing in return.
 
 If this is of any interest or you find this useful. Please consider becoming a patron on Patreon *if you can, when you can*.
 
 [![](https://jap.alekhin.io/wp-content/uploads/2019/03/become-patron-button.png)](https://www.patreon.com/bePatron?u=6507717)
 
 Doing so will also support all my other projects and tutorials.
+
+## ❕ Important Note
+
+This project has a status of `pre-release`. Most things are hard-coded as the customizer functionality for these things are not yet developed.
+
+The social links, for example, are hard-coded to my profiles so you have to change those manually if you want to use this theme.
 
 ## Getting Started
 
