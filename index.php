@@ -29,6 +29,21 @@
       </div>
       <hr class="d-lg-none mx-auto mb-4" />
     <?php endwhile; ?>
+
+    <nav class="homePostsNav text-center mb-5">
+      <?php if (get_next_posts_link() != null): ?>
+        <a class="btn btn-info" href="<?php echo get_next_posts_page_link(); ?>" role="button">
+          <i class="fas fa-long-arrow-alt-left"></i>
+          Older posts
+        </a>
+      <?php endif; ?>
+      <?php if (get_previous_posts_link() != null): ?>
+        <a class="btn btn-info" href="<?php echo get_previous_posts_page_link(); ?>" role="button">
+          Newer posts
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </a>
+      <?php endif; ?>
+    </nav>
   </div>
 </div>
 <?php get_footer();
