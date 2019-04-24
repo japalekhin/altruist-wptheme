@@ -60,3 +60,11 @@ add_filter('the_content', function($content) {
   }
   return $content;
 }, 1);
+
+// functions
+function altruistGetHomePostImageURL($postID) {
+  $attachmentID = get_post_thumbnail_id();
+  if ($attachmentID == 0) return '';
+  $src = wp_get_attachment_image_src($attachmentID, 'post-thumbnail');
+  return $src[0];
+}
