@@ -4,7 +4,10 @@
     <?php while(have_posts()): ?>
       <?php the_post(); ?>
       <div class="homePost d-flex flex-column flex-md-row align-items-center align-items-md-start my-5">
-        <a href="<?php the_permalink(); ?>" class="homePostImage mb-2 mb-md-0 mr-md-4 flex-shrink-0"></a>
+        <?php $imageURL = altruistGetHomePostImageURL(get_the_ID()); ?>
+        <?php if ($imageURL != ''): ?>
+          <a href="<?php the_permalink(); ?>" style="background-image: url('<?php echo $imageURL; ?>');" class="homePostImage mb-2 mb-md-0 mr-md-4 flex-shrink-0"></a>
+        <?php endif; ?>
         <div class="homePostDetails">
           <h2 class="homePostTitle">
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>

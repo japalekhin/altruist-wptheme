@@ -31,7 +31,10 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 44rem;
 }
 .homePosts .homePost .homePostImage {
-  background-color: pink;
+  background-color: #d2dae2;
+  background-position: 45% 45%;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: block;
   max-width: 24rem;
   width: 100%;
