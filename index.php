@@ -12,7 +12,7 @@
           <h2 class="homePostTitle">
             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
           </h2>
-          <p class="homePostSubtitle">Subtitle</p>
+          <!-- <p class="homePostSubtitle">Subtitle</p> -->
           <div class="homePostMeta">
             <span class="homePostMetaItem">
               <i class="far fa-clock mr-1"></i>
