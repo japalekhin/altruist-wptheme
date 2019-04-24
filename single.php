@@ -31,5 +31,12 @@
       </div>
     </div>
   </section>
+  <?php if (get_post_status(get_the_ID()) == 'publish' && comments_open() || '0' != get_comments_number()): ?>
+    <footer class="articleFooter articleComments my-5">
+      <div class="container">
+        <?php comments_template('', true); ?>
+      </div>
+    </footer>
+  <?php endif; ?>
 </div>
 <?php get_footer(); ?>
