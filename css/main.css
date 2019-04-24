@@ -25,6 +25,67 @@ h1, h2, h3, h4, h5, h6 {
 
 /* footer section */
 
+/* blog home */
+.homePosts .homePost {
+  margin: auto;
+  max-width: 44rem;
+}
+.homePosts .homePost .homePostImage {
+  background-color: pink;
+  display: block;
+  max-width: 24rem;
+  width: 100%;
+}
+.homePosts .homePost .homePostImage::before {
+  content: '';
+  display: block;
+  padding-top: 61.8%;
+}
+@media only screen and (min-width: 48rem) {
+  .homePosts .homePost .homePostImage {
+    width: 12rem;
+  }
+  .homePosts .homePost .homePostImage::before {
+    padding-top: 75%;
+  }
+}
+@media only screen and (min-width: 62rem) {
+  .homePosts .homePost .homePostImage {
+    margin-left: -6rem;
+    width: 18rem;
+  }
+  .homePosts .homePost .homePostImage::before {
+    padding-top: 61.8%;
+  }
+}
+.homePosts .homePost .homePostTitle {
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+.homePosts .homePost .homePostTitle a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.homePosts .homePost .homePostSubtitle {
+  color: #757575;
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.5rem;
+}
+.homePosts .homePost .homePostMeta {
+  color: #757575;
+}
+.homePosts .homePost .homePostMeta .homePostMetaItem {
+  display: inline-block;
+  margin-right: 1rem;
+}
+.homePosts .homePost .homePostMeta a {
+  color: inherit;
+  text-decoration: inherit;
+}
+.homePosts hr {
+  max-width: 44rem;
+}
+
 /* article related - single/page */
 .articleContainer {
   margin: auto;
