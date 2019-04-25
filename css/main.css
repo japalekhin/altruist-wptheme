@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
 .articleBody blockquote.wp-block-quote p:last-child {
   margin: 0;
 }
-.articleBody p code {
+.articleBody code {
   background-color: #d2dae2;
   color: #000;
   padding: .125rem .25rem;
@@ -202,7 +202,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -1rem;
 }
 .articleBody pre.wp-block-code code {
-  color: #000;
+  background-color: transparent;
   display: block;
   padding: .5rem 1rem;
 }
