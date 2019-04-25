@@ -163,6 +163,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: .125rem .25rem;
 }
 .articleBody pre.wp-block-code {
+  background-color: #d2dae2;
   margin-bottom: 1.618em;
   margin-left: -.5rem;
   margin-right: -.5rem;
@@ -181,7 +182,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .articleBody pre.wp-block-code code {
-  background-color: #d2dae2;
   color: #000;
   display: block;
   padding: .5rem 1rem;
