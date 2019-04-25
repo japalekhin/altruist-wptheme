@@ -157,6 +157,35 @@ h1, h2, h3, h4, h5, h6 {
 .articleBody p {
   margin-bottom: 1.618em;
 }
+.articleBody blockquote.wp-block-quote {
+  background-color: #d2dae2;
+  border-radius: .25rem;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+  font-size: 1.125em;
+  font-style: italic;
+  margin-left: -.5rem;
+  margin-right: -.5rem;
+  padding: 1rem 1rem 1rem 4rem;
+  position: relative;
+}
+.articleBody blockquote.wp-block-quote::before {
+  content: "\f10d";
+  color: #b2bec3;
+  display: inline-block;
+  font-family: "Font Awesome 5 Free";
+  -webkit-font-smoothing: antialiased;
+  font-size: 2rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 900;
+  left: 1rem;
+  position: absolute;
+  text-rendering: auto;
+  top: 0;
+}
+.articleBody blockquote.wp-block-quote p:last-child {
+  margin: 0;
+}
 .articleBody p code {
   background-color: #d2dae2;
   color: #000;
@@ -164,27 +193,32 @@ h1, h2, h3, h4, h5, h6 {
 }
 .articleBody pre.wp-block-code {
   background-color: #d2dae2;
+  border-radius: .25rem;
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) inset;
+  cursor: text;
   margin-bottom: 1.618em;
   margin-left: -.5rem;
   margin-right: -.5rem;
   margin-top: -1rem;
 }
+.articleBody pre.wp-block-code code {
+  color: #000;
+  display: block;
+  padding: .5rem 1rem;
+}
 @media only screen and (min-width: 36rem) {
-  .articleBody pre.wp-block-code {
+  .articleBody pre.wp-block-code,
+  .articleBody blockquote.wp-block-quote {
     margin-left: -1rem;
     margin-right: -1rem;
   }
 }
 @media only screen and (min-width: 62rem) {
-  .articleBody pre.wp-block-code {
+  .articleBody pre.wp-block-code,
+  .articleBody blockquote.wp-block-quote {
     margin-left: -2rem;
     margin-right: -2rem;
   }
-}
-.articleBody pre.wp-block-code code {
-  color: #000;
-  display: block;
-  padding: .5rem 1rem;
 }
 .articleBody ul li,
 .articleBody ol li {
