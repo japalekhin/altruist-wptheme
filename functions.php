@@ -28,6 +28,11 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', [], false, true);
 });
 
+
+add_action('admin_init', function() {
+  add_editor_style('css/editor-style.css');
+});
+
 // title backwards compatibility (actually not needed since minimum wp version is 5.0.0)
 if (!function_exists('_wp_render_title_tag')) {
   add_action('wp_head', function () {
