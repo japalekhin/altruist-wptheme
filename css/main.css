@@ -208,21 +208,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 .articleBody .google-auto-placed {
   margin-bottom: 1.618em;
-  margin-left: -.5rem;
-  margin-right: -.5rem;
+  overflow: hidden;
 }
 @media only screen and (min-width: 36rem) {
   .articleBody pre.wp-block-code,
-  .articleBody blockquote.wp-block-quote,
-  .articleBody .google-auto-placed {
+  .articleBody blockquote.wp-block-quote {
     margin-left: -1rem;
     margin-right: -1rem;
   }
 }
 @media only screen and (min-width: 62rem) {
   .articleBody pre.wp-block-code,
-  .articleBody blockquote.wp-block-quote,
-  .articleBody .google-auto-placed {
+  .articleBody blockquote.wp-block-quote {
     margin-left: -2rem;
     margin-right: -2rem;
   }
