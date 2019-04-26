@@ -97,6 +97,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: auto;
   max-width: 44rem;
 }
+.articleBody .google-auto-placed {
+  overflow: hidden;
+}
 .articleHeader .articleTitle {
   font-family: 'Lora', serif;
   font-size: 2.125rem;
@@ -208,7 +211,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .articleBody .google-auto-placed {
   margin-bottom: 1.618em;
-  overflow: hidden;
 }
 @media only screen and (min-width: 36rem) {
   .articleBody pre.wp-block-code,
