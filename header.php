@@ -11,7 +11,6 @@
   <?php wp_head(); ?>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-5310211034721162",enable_page_level_ads: true});</script>
-  <script>var headerAd = document.querySelector('#main .articleContainer .google-auto-placed'); if (headerAd !== null) headerAd.innerHtml = '';</script>
 </head>
 
 <body class="d-flex flex-column h-100">
