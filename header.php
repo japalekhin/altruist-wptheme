@@ -2,10 +2,14 @@
 <html class="no-js h-100" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="">
+  <meta charset="<?php bloginfo('charset'); ?>" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fafafa">
+  <link rel="profile" href="http://gmpg.org/xfn/11" />
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-5310211034721162",enable_page_level_ads: true});</script>
+  <meta name="flattr:id" content="pd2l5k" />
   <?php wp_head(); ?>
 </head>
 
