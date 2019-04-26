@@ -6,11 +6,12 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fafafa">
+  <meta name="flattr:id" content="pd2l5k" />
   <link rel="profile" href="http://gmpg.org/xfn/11" />
+  <?php wp_head(); ?>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-5310211034721162",enable_page_level_ads: true});</script>
-  <meta name="flattr:id" content="pd2l5k" />
-  <?php wp_head(); ?>
+  <script>var headerAd = document.querySelector('#main .articleContainer .google-auto-placed'); if (headerAd !== null) headerAd.innerHtml = '';</script>
 </head>
 
 <body class="d-flex flex-column h-100">
