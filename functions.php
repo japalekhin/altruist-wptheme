@@ -41,9 +41,6 @@ if (!function_exists('_wp_render_title_tag')) {
   });
 }
 
-// remove admin bar
-add_filter('show_admin_bar', '__return_false');
-
 // modify excerpt more
 add_filter('excerpt_more', function ($more) {
   return '&hellip;';

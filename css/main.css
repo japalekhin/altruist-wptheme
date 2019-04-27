@@ -10,6 +10,16 @@ h1, h2, h3, h4, h5, h6 {
 #header {
   font-family: 'Cabin', sans-serif;
 }
+@media only screen and (min-width: 37.5625rem) {
+  body.admin-bar #header {
+    margin-top: 2.875rem !important;
+  }
+}
+@media only screen and (min-width: 48.9375rem) {
+  body.admin-bar #header {
+    margin-top: 2rem !important;
+  }
+}
 #header .navSocial .nav-item {
   filter: saturate(.45);
   transition: filter .25s;
