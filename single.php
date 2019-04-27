@@ -9,7 +9,12 @@
         <div class="articleMeta pt-2 pb-4">
           <span class="articleMetaItem">
             <i class="far fa-clock mr-1"></i>
-            <?php the_time('l, F j, Y'); ?>
+            <?php the_time('D, F j, Y'); ?>
+          </span>
+          <span class="articleMetaItem">
+            <?php $readTime = altruistGetReadLength(get_the_ID()); ?>
+            <i class="fas fa-glasses mr-1"></i>
+            <?php echo $readTime; ?> minute<?php echo ($readTime == 1 ? '' : 's'); ?>
           </span>
           <?php if (comments_open()): ?>
             <i class="far fa-comments mr-1"></i>
