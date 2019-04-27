@@ -13,7 +13,7 @@
   <script>(adsbygoogle = window.adsbygoogle || []).push({google_ad_client: "ca-pub-5310211034721162",enable_page_level_ads: true});</script>
 </head>
 
-<body class="d-flex flex-column h-100">
+<body <?php body_class('d-flex flex-column h-100'); ?>>
   <header id="header" class="fixed-top bg-dark">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
