@@ -28,7 +28,6 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', [], false, true);
 });
 
-
 add_action('admin_init', function() {
   add_editor_style('css/editor-style.css');
 });
@@ -66,10 +65,47 @@ add_filter('the_content', function($content) {
   return $content;
 }, 1);
 
-// functions
+// *** functions
+
+// get cover image url
 function altruistGetHomePostImageURL($postID) {
   $attachmentID = get_post_thumbnail_id();
   if ($attachmentID == 0) return '';
   $src = wp_get_attachment_image_src($attachmentID, 'post-thumbnail');
   return $src[0];
+}
+
+// get read length in minutes
+function altruistGetReadLength($postID) {
+  // opinionated constants
+  $wordsPerMinute = 200;
+  $secondsPerImage = 3;
+
+  // get content
+  $content = get_post_field('post_content', $postID);
+
+  // get plain text and collapse whitespace
+  $plainContent = wp_strip_all_tags($content, true);
+  $plainContent = preg_replace('/\s+/', ' ', $plainContent);
+
+  // count words
+  $words = explode(' ', $plainContent);
+
+  // minutes on words
+  $wordMinutes = count($words) / $wordsPerMinute;
+
+  // count images
+  $imageCount = substr_count($content, '<img');
+
+  // minutes on images
+  $imageSeconds = $imageCount * $secondsPerImage;
+  $imageMinutes = $imageSeconds / 60;
+
+  // totals
+  $totalMinutes = $wordMinutes + $imageMinutes;
+  $remainderMinutes = $totalMinutes - intval($totalMinutes);
+  return max(
+    1,
+    intval($totalMinutes) + ($remainderMinutes < .5 ? 0 : 1)
+  );
 }
