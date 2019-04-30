@@ -8,7 +8,7 @@ Suited for those guys who like to help people and offer free software and conten
 
 > Pay what you can, when you can.
 
-This is the next iteration of [Devin'](https://github.com/japalekhin/devin-wp-theme) another free WordPress theme for developers.
+This is the next iteration of [Devin'](https://github.com/japalekhin/devin-wptheme) another free WordPress theme for developers.
 
 ## 🤗 Support
 
