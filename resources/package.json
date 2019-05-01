@@ -4,7 +4,9 @@
   "description": "Free WordPress theme for semi-professional, semi-personal blog with focus on altruism.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "node compiler/serve",
+    "start": "node compiler/serve",
+    "build": "node compiler/build"
   },
   "repository": {
     "type": "git",
