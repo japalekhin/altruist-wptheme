@@ -1,0 +1,26 @@
+{
+  "name": "altruist",
+  "version": "0.2.0",
+  "description": "Free WordPress theme for semi-professional, semi-personal blog with focus on altruism.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/japalekhin/altruist-wptheme.git"
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "webpack",
+    "scss",
+    "sass"
+  ],
+  "author": "Japa Alekhin Llemos <jap@alekhin.io>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/japalekhin/altruist-wptheme/issues"
+  },
+  "homepage": "https://github.com/japalekhin/altruist-wptheme#readme"
+}
