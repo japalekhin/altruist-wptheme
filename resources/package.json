@@ -51,5 +51,22 @@
     "webpack": "^4.30.0",
     "webpack-dev-middleware": "^3.6.2",
     "webpack-hot-middleware": "^2.24.4"
-  }
+  },
+  "browserlist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "android 4",
+    "opera 12",
+    "ie >= 10",
+    "ie_mob >= 10",
+    "ff >= 30",
+    "chrome >= 34",
+    "safari >= 7",
+    "opera >= 23",
+    "ios >= 7",
+    "android >= 4.4",
+    "bb >= 10",
+    "not dead"
+  ]
 }
