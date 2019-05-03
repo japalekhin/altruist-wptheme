@@ -1,7 +1,7 @@
-import path from 'path';
-import minimatch from 'minimatch';
+const path = require('path');
+const minimatch = require('minimatch');
 
-export default class {
+module.exports = class {
   constructor(options) {
     this.options = options;
   }

@@ -52,7 +52,7 @@
     "webpack-dev-middleware": "^3.6.2",
     "webpack-hot-middleware": "^2.24.4"
   },
-  "browserlist": [
+  "browserslist": [
     "> 0.5%",
     "last 2 versions",
     "Firefox ESR",
