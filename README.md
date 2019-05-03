@@ -2,7 +2,7 @@
 
 ![](screenshot.png?raw=true)
 
-**Altruist** is a free WordPress theme for semi-personal, semi-professional developer blogs with a focus on the concept of **honorware**.
+**Altruist** is an honorware (free) WordPress theme for semi-personal, semi-professional developer blogs with a focus on the concept of **altruism**.
 
 Suited for those guys who like to help people and offer free software and content, only asking people to:
 
@@ -22,9 +22,9 @@ Doing so will also support all my other projects and tutorials.
 
 ## ❕ Important Note
 
-This project has a status of `pre-release`. Most things are hard-coded as the customizer functionality for these things are not yet developed.
+This project has a status of `alpha`. Most things are hard-coded as the customizer functionality for these things are not yet developed.
 
-The social links, for example, are hard-coded to my profiles so you have to change those manually if you want to use this theme.
+The social links, for example, are hard-coded to my profiles so you have to change those manually if you want to use this theme, for now.
 
 ## Getting Started
 
