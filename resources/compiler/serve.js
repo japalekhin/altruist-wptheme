@@ -33,7 +33,7 @@ browserSync.init({
     rule: {
       match: /<\/head>/i,
       fn: function (snippet, match) {
-        return `<script src="${getPublicPath(publicFolder)}"></script>${snippet}${match}`;
+        return `<script src="${getPublicPath(publicFolder)}styles/main.js"></script>${snippet}${match}`;
       },
     },
   },

@@ -1,5 +1,6 @@
 const querystring = require('querystring');
 const overlayStyles = require('./overlay');
+
 module.exports = {
   getClient() {
     const host = 'webpack-hot-middleware/client?';
@@ -11,6 +12,7 @@ module.exports = {
       noInfo: true,
       overlayStyles: JSON.stringify(overlayStyles)
     });
+
     return `${host}${query}`;
   }
-};
+}
