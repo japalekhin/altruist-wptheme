@@ -10,6 +10,9 @@ add_action('after_setup_theme', function() {
   register_nav_menu('primary', __('Primary Menu', 'altruist'));
 });
 
+// customizer functions
+require(get_stylesheet_directory() . '/inc/customizer/header.php');
+
 add_action('init', function () {
   remove_action('wp_head', 'wp_print_scripts');
   remove_action('wp_head', 'wp_print_head_scripts', 9);

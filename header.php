@@ -18,7 +18,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="<?php echo home_url(); ?>">
-          <img alt="<?php bloginfo('name'); ?>" src="https://www.gravatar.com/avatar/b67403727ea18e05af2557dc8542b37b?s=160&d=mm" width="40" height="40" class="rounded-circle mr-1" />
+          <?php $gravatarEmail = strtolower(trim(get_theme_mod('gravatarEmail', ''))); ?>
+          <?php if ($gravatarEmail !== ''): ?>
+            <img alt="<?php bloginfo('name'); ?>" src="https://www.gravatar.com/avatar/<?php echo md5($gravatarEmail); ?>?s=160&d=mm" width="40" height="40" class="rounded-circle mr-1" />
+          <?php endif; ?>
           <?php bloginfo('name'); ?>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
