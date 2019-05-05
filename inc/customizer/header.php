@@ -27,7 +27,11 @@ add_action('customize_register', function ($c) {
     'type' => 'text',
   ]);
   // use custom site name
-  $c->add_setting('useCustomSiteName', []);
+  $c->add_setting('useCustomSiteName', [
+    'sanitize_callback' => function($input) {
+      return isset($input) && true == $input;
+    },
+  ]);
   $c->add_control('useCustomSiteName', [
     'label' => 'Use custom site name',
     'section' => 'siteBranding',
