@@ -10,6 +10,12 @@ add_action('customize_register', function ($c) {
     'panel' => 'siteHeader',
     'description_hidden' => true,
   ]);
+  $c->add_section('socialLinks', [
+    'title' => 'Social links (and Patreon)',
+    'description' => 'Social links + Patreon section',
+    'panel' => 'siteHeader',
+    'description_hidden' => true,
+  ]);
 
   // gravatar
   $c->add_setting('gravatarEmail', ['sanitize_callback' => 'sanitize_email',]);
@@ -55,5 +61,73 @@ add_action('customize_register', function ($c) {
       'gravatar' => 'Gravatar only',
       'name' => 'Site name only',
     ],
+  ]);
+
+  // social links
+  $c->add_setting('socialPatreon', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialPatreon', [
+    'label' => 'Patreon profile URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
+  ]);
+  $c->add_setting('socialFacebook', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialFacebook', [
+    'label' => 'Facebook page/profile URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
+  ]);
+  $c->add_setting('socialTwitter', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialTwitter', [
+    'label' => 'Twitter profile URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
+  ]);
+  $c->add_setting('socialInstagram', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialInstagram', [
+    'label' => 'Instagram profile URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
+  ]);
+  $c->add_setting('socialGitHub', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialGitHub', [
+    'label' => 'GitHub profile URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
+  ]);
+  $c->add_setting('socialStrava', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialStrava', [
+    'label' => 'Strava athlete page URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
+  ]);
+  $c->add_setting('socialLinkedIn', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialLinkedIn', [
+    'label' => 'LinkedIn profile URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
+  ]);
+  $c->add_setting('socialYoutube', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialYoutube', [
+    'label' => 'Youtube channel URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
+  ]);
+  $c->add_setting('socialTwitch', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialTwitch', [
+    'label' => 'Twitch profile URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
+  ]);
+  $c->add_setting('socialDiscord', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialDiscord', [
+    'label' => 'Discord invite URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
+  ]);
+  $c->add_setting('socialWordPress', ['sanitize_callback' => 'esc_url_raw',]);
+  $c->add_control('socialWordPress', [
+    'label' => 'WordPress.org profile URL',
+    'section' => 'socialLinks',
+    'type' => 'url',
   ]);
 });

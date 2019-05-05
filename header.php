@@ -47,55 +47,102 @@
               'walker' => new WP_Bootstrap_Navwalker(),
             ]);
           ?>
-          <ul class="nav navbar-nav navSocial d-flex flex-row mt-3 mb-3 my-lg-auto ml-auto mr-lg-2">
-            <li class="nav-item mx-1">
-              <a href="https://github.com/japalekhin" target="_blank" title="GitHub">
-                <img alt="GitHub" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-github.svg" width="32" height="32" />
-              </a>
-            </li>
-            <li class="nav-item mx-1">
-              <a href="https://discord.gg/SNvNfas" target="_blank" title="Discord">
-                <img alt="Discord" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-discord.svg" width="32" height="32" />
-              </a>
-            </li>
-            <li class="nav-item mx-1">
-              <a href="https://www.strava.com/athletes/japalekhin" target="_blank" title="Strava">
-                <img alt="Strava" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-strava.svg" width="32" height="32" />
-              </a>
-            </li>
-            <li class="nav-item mx-1">
-              <a href="https://www.twitch.tv/japalekhin" target="_blank" title="Twitch">
-                <img alt="Twitch" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-twitch.svg" width="32" height="32" />
-              </a>
-            </li>
-            <li class="nav-item mx-1">
-              <a href="https://www.linkedin.com/in/japa-alekhin-llemos-400641167/" target="_blank" title="LinkedIn">
-                <img alt="LinkedIn" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-linked-in.svg" width="32" height="32" />
-              </a>
-            </li>
-            <li class="nav-item mx-1">
-              <a href="https://www.facebook.com/japalekhin" target="_blank" title="Facebook">
-                <img alt="Facebook" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-facebook.svg" width="32" height="32" />
-              </a>
-            </li>
-            <li class="nav-item mx-1">
-              <a href="https://twitter.com/japalekhin" target="_blank" title="Twitter">
-                <img alt="Twitter" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-twitter.svg" width="32" height="32" />
-              </a>
-            </li>
-            <li class="nav-item mx-1">
-              <a href="https://www.instagram.com/japalekhin/" target="_blank" title="Instagram">
-                <img alt="Instagram" src="<?php echo home_url(); ?>/wp-content/themes/altruist/img/icon-instagram.svg" width="32" height="32" />
-              </a>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav mb-3 mb-lg-auto">
-            <li class="nav-item">
-              <a href="https://www.patreon.com/bePatron?u=6507717" target="_blank" rel="noopener noreferrer">
-                <img src="<?php echo home_url(); ?>/wp-content/uploads/2019/03/become-patron-button.png" alt="Become a patron" width="170" height="40" class="rounded">
-              </a>
-            </li>
-          </ul>
+          
+          <?php $socialFacebook = trim(get_theme_mod('socialFacebook')); ?>
+          <?php $socialTwitter = trim(get_theme_mod('socialTwitter')); ?>
+          <?php $socialInstagram = trim(get_theme_mod('socialInstagram')); ?>
+          <?php $socialGitHub = trim(get_theme_mod('socialGitHub')); ?>
+          <?php $socialStrava = trim(get_theme_mod('socialStrava')); ?>
+          <?php $socialLinkedIn = trim(get_theme_mod('socialLinkedIn')); ?>
+          <?php $socialYoutube = trim(get_theme_mod('socialYoutube')); ?>
+          <?php $socialTwitch = trim(get_theme_mod('socialTwitch')); ?>
+          <?php $socialDiscord = trim(get_theme_mod('socialDiscord')); ?>
+          <?php $socialWordPress = trim(get_theme_mod('socialWordPress')); ?>
+          <?php $hasSocialLinks = $socialFacebook . $socialTwitter . $socialInstagram . $socialGitHub . $socialStrava . $socialLinkedIn . $socialYoutube . $socialTwitch . $socialDiscord !== ''; ?>
+          <?php if ($hasSocialLinks): ?>
+            <ul class="nav navbar-nav navSocial d-flex flex-row mt-3 mb-3 my-lg-auto ml-auto mr-lg-2">
+              <?php if ($socialGitHub !== ''): ?>
+                <li class="nav-item mx-1">
+                  <a href="<?php echo $socialGitHub; ?>" target="_blank" title="GitHub">
+                    <img alt="GitHub" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-github.svg" width="32" height="32" />
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if ($socialDiscord !== ''): ?>
+                <li class="nav-item mx-1">
+                  <a href="<?php echo $socialDiscord; ?>" target="_blank" title="Discord">
+                    <img alt="Discord" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-discord.svg" width="32" height="32" />
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if ($socialStrava !== ''): ?>
+                <li class="nav-item mx-1">
+                  <a href="<?php echo $socialStrava; ?>" target="_blank" title="Strava">
+                    <img alt="Strava" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-strava.svg" width="32" height="32" />
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if ($socialTwitch !== ''): ?>
+                <li class="nav-item mx-1">
+                  <a href="htt<?php echo $socialTwitch; ?>" target="_blank" title="Twitch">
+                    <img alt="Twitch" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-twitch.svg" width="32" height="32" />
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if ($socialLinkedIn !== ''): ?>
+                <li class="nav-item mx-1">
+                  <a href="<?php echo $socialLinkedIn; ?>" target="_blank" title="LinkedIn">
+                    <img alt="LinkedIn" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-linked-in.svg" width="32" height="32" />
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if ($socialWordPress !== ''): ?>
+                <li class="nav-item mx-1">
+                  <a href="<?php echo $socialWordPress; ?>" target="_blank" title="WordPress.org">
+                    <img alt="WordPress.org" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-wordpress.org.svg" width="32" height="32" />
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if ($socialFacebook !== ''): ?>
+                <li class="nav-item mx-1">
+                  <a href="<?php echo $socialFacebook; ?>" target="_blank" title="Facebook">
+                    <img alt="Facebook" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-facebook.svg" width="32" height="32" />
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if ($socialYoutube !== ''): ?>
+                <li class="nav-item mx-1">
+                  <a href="<?php echo $socialYoutube; ?>" target="_blank" title="Youtube">
+                    <img alt="Facebook" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-youtube.svg" width="32" height="32" />
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if ($socialTwitter !== ''): ?>
+                <li class="nav-item mx-1">
+                  <a href="<?php echo $socialTwitter; ?>" target="_blank" title="Twitter">
+                    <img alt="Twitter" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-twitter.svg" width="32" height="32" />
+                  </a>
+                </li>
+              <?php endif; ?>
+              <?php if ($socialInstagram !== ''): ?>
+                <li class="nav-item mx-1">
+                  <a href="<?php echo $socialInstagram; ?>" target="_blank" title="Instagram">
+                    <img alt="Instagram" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icon-instagram.svg" width="32" height="32" />
+                  </a>
+                </li>
+              <?php endif; ?>
+            </ul>
+          <?php endif; ?>
+          <?php $socialPatreon = trim(get_theme_mod('socialPatreon')); ?>
+          <?php if ($socialPatreon !== ''): ?>
+            <ul class="nav navbar-nav mb-3<?php echo $hasSocialLinks ? '' : ' ml-auto'; ?> mb-lg-auto">
+              <li class="nav-item">
+                <a href="<?php echo $socialPatreon; ?>" target="_blank" rel="noopener noreferrer">
+                  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/button-patreon.png" alt="Become a patron" width="170" height="40" class="rounded">
+                </a>
+              </li>
+            </ul>
+          <?php endif; ?>
         </div>
       </div>
     </nav>
