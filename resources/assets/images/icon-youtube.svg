@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Capa_1"
+   x="0px"
+   y="0px"
+   viewBox="0 0 128 128"
+   xml:space="preserve"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="icon-youtube.svg"
+   width="128"
+   height="128"><metadata
+     id="metadata43"><rdf:RDF><cc:Work
+         rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+     id="defs41" /><sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview39"
+     showgrid="false"
+     inkscape:zoom="1"
+     inkscape:cx="197.8386"
+     inkscape:cy="53.392944"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Capa_1" /><path
+     style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:11.96220493;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke markers fill"
+     d="M 128,64.000002 A 64.000002,64.000002 0 0 1 64.000003,128 64.000002,64.000002 0 0 1 0,64.000002 64.000002,64.000002 0 0 1 64.000003,5.12133e-8 64.000002,64.000002 0 0 1 128,64.000002 Z"
+     id="path827"
+     inkscape:connector-curvature="0" /><g
+     id="g9"
+     transform="translate(0,15.804001)" /><g
+     id="g11"
+     transform="translate(0,15.804001)" /><g
+     id="g13"
+     transform="translate(0,15.804001)" /><g
+     id="g15"
+     transform="translate(0,15.804001)" /><g
+     id="g17"
+     transform="translate(0,15.804001)" /><g
+     id="g19"
+     transform="translate(0,15.804001)" /><g
+     id="g21"
+     transform="translate(0,15.804001)" /><g
+     id="g23"
+     transform="translate(0,15.804001)" /><g
+     id="g25"
+     transform="translate(0,15.804001)" /><g
+     id="g27"
+     transform="translate(0,15.804001)" /><g
+     id="g29"
+     transform="translate(0,15.804001)" /><g
+     id="g31"
+     transform="translate(0,15.804001)" /><g
+     id="g33"
+     transform="translate(0,15.804001)" /><g
+     id="g35"
+     transform="translate(0,15.804001)" /><g
+     id="g37"
+     transform="translate(0,15.804001)" /><g
+     id="g858"
+     transform="matrix(0.07832387,0,0,0.07832387,23.859017,35.760329)"
+     style="stroke-width:12.76749992"><path
+       d="M 407,493 683,350 407,206 Z"
+       id="Triangle"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff;stroke-width:12.76749992" /><path
+       d="M 407,206 649,367.6 683,350 Z"
+       enable-background="new    "
+       id="The_Sharpness"
+       inkscape:connector-curvature="0"
+       style="opacity:0.12000002;fill:#420000;stroke-width:12.76749992" /><g
+       id="Lozenge"
+       style="stroke-width:12.76749992">
+	<g
+   id="g840"
+   style="stroke-width:12.76749992">
+		
+			<linearGradient
+   gradientTransform="matrix(1,0,0,-1,0,721)"
+   y2="1.2"
+   x2="512.5"
+   y1="719.70001"
+   x1="512.5"
+   gradientUnits="userSpaceOnUse"
+   id="SVGID_1_">
+			<stop
+   id="stop833"
+   style="stop-color:#E52D27"
+   offset="0" />
+			<stop
+   id="stop835"
+   style="stop-color:#BF171D"
+   offset="1" />
+		</linearGradient>
+		<path
+   id="path838"
+   d="m 1013,156.3 c 0,0 -10,-70.4 -40.6,-101.4 C 933.6,14.2 890,14 870.1,11.6 727.1,1.3 512.7,1.3 512.7,1.3 h -0.4 c 0,0 -214.4,0 -357.4,10.3 C 135,14 91.4,14.2 52.6,54.9 22,85.9 12,156.3 12,156.3 c 0,0 -10.2,82.6 -10.2,165.3 v 77.5 c 0,82.7 10.2,165.3 10.2,165.3 0,0 10,70.4 40.6,101.4 38.9,40.7 89.9,39.4 112.6,43.7 81.7,7.8 347.3,10.3 347.3,10.3 0,0 214.6,-0.3 357.6,-10.7 20,-2.4 63.5,-2.6 102.3,-43.3 30.6,-31 40.6,-101.4 40.6,-101.4 0,0 10.2,-82.7 10.2,-165.3 v -77.5 c 0,-82.7 -10.2,-165.3 -10.2,-165.3 z M 407,493 V 206 l 276,144 z"
+   inkscape:connector-curvature="0"
+   style="fill:url(#SVGID_1_);stroke-width:12.76749992" />
+	</g>
+</g></g></svg>
