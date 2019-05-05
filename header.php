@@ -18,11 +18,17 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="<?php echo home_url(); ?>">
+          <?php $brandingDisplay = get_theme_mod('brandingDisplay', ''); ?>
           <?php $gravatarEmail = strtolower(trim(get_theme_mod('gravatarEmail', ''))); ?>
-          <?php if ($gravatarEmail !== ''): ?>
-            <img alt="<?php bloginfo('name'); ?>" src="https://www.gravatar.com/avatar/<?php echo md5($gravatarEmail); ?>?s=160&d=mm" width="40" height="40" class="rounded-circle mr-1" />
+          <?php $customSiteName = trim(get_theme_mod('customSiteName', '')); ?>
+          <?php $useCustomSiteName = (get_theme_mod('useCustomSiteName', false) === true); ?>
+          <?php $siteName = ($useCustomSiteName && $customSiteName !== '') ? $customSiteName : get_bloginfo('name'); ?>
+          <?php if ($gravatarEmail !== '' && in_array($brandingDisplay, ['', 'gravatar'])): ?>
+            <img alt="<?php echo $siteName; ?>" src="https://www.gravatar.com/avatar/<?php echo md5($gravatarEmail); ?>?s=160&d=mm" width="40" height="40" class="rounded-circle mr-1" />
           <?php endif; ?>
-          <?php bloginfo('name'); ?>
+          <?php if (in_array($brandingDisplay, ['', 'name'])): ?>
+            <?php echo $siteName; ?>
+          <?php endif; ?>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
