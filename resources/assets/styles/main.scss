@@ -174,8 +174,6 @@ body.admin-bar #header {
       box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
       font-size: 1.125em;
       font-style: italic;
-      margin-left: -.5rem;
-      margin-right: -.5rem;
       padding: 1rem 1rem 1rem 4rem;
       position: relative;
       &::before {
@@ -210,8 +208,6 @@ body.admin-bar #header {
       box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) inset;
       cursor: text;
       margin-bottom: 1.618em;
-      margin-left: -.5rem;
-      margin-right: -.5rem;
       margin-top: -1rem;
       code {
         background-color: transparent;
@@ -221,20 +217,6 @@ body.admin-bar #header {
     }
     .google-auto-placed {
       margin-bottom: 1.618em;
-    }
-    @media only screen and (min-width: 36rem) {
-      pre.wp-block-code,
-      blockquote.wp-block-quote {
-        margin-left: -1rem;
-        margin-right: -1rem;
-      }
-    }
-    @media only screen and (min-width: 62rem) {
-      pre.wp-block-code,
-      blockquote.wp-block-quote {
-        margin-left: -2rem;
-        margin-right: -2rem;
-      }
     }
     ul, ol {
       li {
