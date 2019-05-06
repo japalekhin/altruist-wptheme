@@ -26,7 +26,9 @@ add_action('wp_enqueue_scripts', function () {
   wp_enqueue_style('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
   wp_enqueue_style('fonts', 'https://fonts.googleapis.com/css?family=Cabin|Lora');
   wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/css/all.css');
-  wp_enqueue_style('altruist', get_stylesheet_directory_uri() . '/assets/styles/main.css', ['bootstrap', 'fonts', 'fontawesome',]);
+  if ($_SERVER['SERVER_ADDR'] !== '127.0.0.1') {
+    wp_enqueue_style('altruist', get_stylesheet_directory_uri() . '/assets/styles/main.css', ['bootstrap', 'fonts', 'fontawesome',]);
+  }
 
   wp_enqueue_script('bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', [], false, true);
   wp_enqueue_script('altruist', get_stylesheet_directory_uri() . '/assets/scripts/main.js', ['bootstrap',], false, true);
