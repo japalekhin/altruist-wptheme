@@ -28,6 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.5",
     "browser-sync": "^2.26.5",
@@ -37,6 +38,7 @@
     "css-loader": "^2.1.1",
     "css-mqpacker": "^7.0.0",
     "cssnano": "^4.1.10",
+    "exports-loader": "^0.7.0",
     "file-loader": "^3.0.1",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "mini-css-extract-plugin": "^0.6.0",
@@ -72,5 +74,10 @@
   ],
   "engines": {
     "node": ">= 8.5.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "popper.js": "^1.15.0"
   }
 }
