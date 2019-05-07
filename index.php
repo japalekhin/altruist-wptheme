@@ -32,7 +32,6 @@
           </div>
         </div>
       </div>
-      <hr class="d-lg-none mx-auto mb-4" />
     <?php endwhile; ?>
 
   </div>
