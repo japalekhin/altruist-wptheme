@@ -52,6 +52,7 @@ body.admin-bar #header {
     box-sizing: border-box;
     margin: auto;
     max-width: 44rem;
+    width: 100%;
     @media only screen and (min-width: 75rem) {
       &:nth-of-type(even) {
         padding-left: 3rem;
@@ -121,7 +122,11 @@ body.admin-bar #header {
     }
   }
   hr {
+    height: .125rem;
+    margin: 0;
+    margin-bottom: 0;
     max-width: 44rem;
+    width: 100%;
   }
 }
 
