@@ -238,13 +238,17 @@ body.admin-bar #header {
   &.articleSingle {
     .articleBody {
       .droppedLetters {
-        background-color: #d2dae2;
+        color: #000;
         float: left;
-        font-size: 4rem;
-        font-weight: bold;
-        line-height: 1;
-        margin: 0 .5rem 0 0;
-        padding: .0625rem .75rem;
+        font-size: 3.5rem;
+        margin: -.9375rem .0625rem 0 0;
+        line-height: 1.25;
+        padding: 0;
+        @media only screen and (min-width: 62rem) {
+          font-size: 4.5rem;
+          margin-bottom: -.25rem;
+          margin-top: -1.375rem;
+        }
       }
     }
   }
