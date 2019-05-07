@@ -23,7 +23,6 @@ add_action('init', function () {
 });
 
 add_action('wp_enqueue_scripts', function () {
-  wp_enqueue_style('fontawesome', 'https://use.fontawesome.com/releases/v5.8.1/css/all.css');
   if ($_SERVER['SERVER_ADDR'] !== '127.0.0.1') {
     wp_enqueue_style('altruist', get_stylesheet_directory_uri() . '/assets/styles/main.css', ['bootstrap', 'fonts', 'fontawesome',]);
   }
