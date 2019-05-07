@@ -18,7 +18,7 @@ module.exports = (options) => {
 
   return {
     mode: dev ? 'development' : 'production',
-    devtool: dev ?  devtool : false,
+    devtool: dev ? devtool : false,
     context: path.resolve(context),
     entry: {
       'styles/main': dev ? [hmr, entry.styles] : entry.styles,
@@ -27,7 +27,7 @@ module.exports = (options) => {
     output: {
       path: path.resolve(outputFolder),
       publicPath: getPublicPath(publicFolder),
-      filename: '[name].js'
+      filename: '[name].js',
     },
     module: {
       rules: [
@@ -35,8 +35,10 @@ module.exports = (options) => {
           test: /\.js$/,
           exclude: /(node_modules|bower_components)\/(?!(dom7|ssr-window|swiper)\/).*/,
           use: [
-            ...(dev ? [{ loader: 'cache-loader' }] : []),
-            { loader: 'babel-loader' }
+            ...(dev ? [
+              { loader: 'cache-loader', },
+            ] : []),
+            { loader: 'babel-loader', },
           ]
         },
         {
@@ -44,11 +46,13 @@ module.exports = (options) => {
           use: [
             ...(dev ? [{ loader: 'cache-loader' }, { loader: 'style-loader', options: { sourceMap: dev } }] : [MiniCssExtractWebpackPlugin.loader]),
             { loader: 'css-loader', options: { sourceMap: dev } },
-            { loader: 'postcss-loader', options: {
-              ident: 'postcss',
-              sourceMap: dev,
-              config: { ctx: { dev } }
-            } },
+            {
+              loader: 'postcss-loader', options: {
+                ident: 'postcss',
+                sourceMap: dev,
+                config: { ctx: { dev } }
+              }
+            },
             { loader: 'resolve-url-loader', options: { sourceMap: dev } },
             { loader: 'sass-loader', options: { sourceMap: true, sourceMapContents: dev } },
           ]
@@ -71,29 +75,29 @@ module.exports = (options) => {
         new webpack.HotModuleReplacementPlugin(),
         new FriendlyErrorsWebpackPlugin()
       ] : [
-        new MiniCssExtractWebpackPlugin({
-          filename: '[name].css'
-        }),
-        new NonJsEntryCleanupPlugin({
-          context: 'styles',
-          extensions: 'js',
-          includeSubfolders: true
-        }),
-        new CopyWebpackPlugin([
-          path.resolve(outputFolder)
-        ], {
-          allowExternal: true,
-          beforeEmit: true
-        }),
-        new CopyWebpackPlugin([
-          {
-            from: path.resolve(`${context}/**/*`),
-            to: path.resolve(outputFolder),
-          }
-        ], {
-          ignore: [ '*.js', '*.ts', '*.scss', '*.css' ]
-        })
-      ])
+          new MiniCssExtractWebpackPlugin({
+            filename: '[name].css'
+          }),
+          new NonJsEntryCleanupPlugin({
+            context: 'styles',
+            extensions: 'js',
+            includeSubfolders: true
+          }),
+          new CopyWebpackPlugin([
+            path.resolve(outputFolder)
+          ], {
+              allowExternal: true,
+              beforeEmit: true
+            }),
+          new CopyWebpackPlugin([
+            {
+              from: path.resolve(`${context}/**/*`),
+              to: path.resolve(outputFolder),
+            }
+          ], {
+              ignore: ['*.js', '*.ts', '*.scss', '*.css']
+            })
+        ])
     ]
   }
 }
