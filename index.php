@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <div class="homePosts">
-  <div class="container">
+  <div class="container d-flex flex-column flex-xl-row flex-xl-wrap">
     <?php while(have_posts()): ?>
       <?php the_post(); ?>
-      <div class="homePost d-flex flex-column flex-md-row align-items-center align-items-md-start my-5">
+      <div class="homePost d-flex flex-column flex-md-row flex-xl-column align-items-center align-items-md-start my-5">
         <?php $imageURL = altruistGetHomePostImageURL(get_the_ID()); ?>
         <?php if ($imageURL != ''): ?>
-          <a href="<?php the_permalink(); ?>" style="background-image: url('<?php echo $imageURL; ?>');" class="homePostImage mb-2 mb-md-0 mr-md-4 flex-shrink-0 rounded"></a>
+          <a href="<?php the_permalink(); ?>" style="background-image: url('<?php echo $imageURL; ?>');" class="homePostImage mb-2 mb-md-0 mb-xl-3 mr-md-4 mr-xl-0 flex-shrink-0 rounded"></a>
         <?php endif; ?>
         <div class="homePostDetails">
           <h2 class="homePostTitle">
@@ -35,6 +35,8 @@
       <hr class="d-lg-none mx-auto mb-4" />
     <?php endwhile; ?>
 
+  </div>
+  <div class="container">
     <nav class="homePostsNav text-center mb-5">
       <?php if (get_next_posts_link() != null): ?>
         <a class="btn btn-info" href="<?php echo get_next_posts_page_link(); ?>" role="button">

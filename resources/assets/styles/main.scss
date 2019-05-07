@@ -49,8 +49,18 @@ body.admin-bar #header {
 /* blog home */
 .homePosts {
   .homePost {
+    box-sizing: border-box;
     margin: auto;
     max-width: 44rem;
+    @media only screen and (min-width: 75rem) {
+      &:nth-of-type(even) {
+        padding-left: 3rem;
+      }
+      &:nth-of-type(odd) {
+        padding-right: 3rem;
+      }
+      width: 50%;
+    }
     .homePostImage {
       background-color: #d2dae2;
       background-position: 45% 45%;
@@ -59,12 +69,19 @@ body.admin-bar #header {
       display: block;
       max-width: 24rem;
       width: 100%;
-      @media only screen and (min-width: 48rem) {
+      @media only screen and (min-width: 48rem) and (max-width: 47.9375rem) {
         width: 12rem;
       }
-      @media only screen and (min-width: 62rem) {
+      @media only screen and (min-width: 62rem) and (max-width: 61.9375rem) {
         margin-left: -6rem;
         width: 18rem;
+      }
+    }
+    .homePostImage {
+      @media only screen and (min-width: 75rem) {
+        margin-left: 0;
+        max-width: none;
+        width: 100%;
       }
     }
     .homePostImage::before {
