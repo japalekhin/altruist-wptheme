@@ -24,11 +24,15 @@ add_action('init', function () {
 
 add_action('wp_enqueue_scripts', function () {
   if ($_SERVER['SERVER_ADDR'] !== '127.0.0.1') {
-    wp_enqueue_style('altruist', get_stylesheet_directory_uri() . '/assets/styles/main.css', ['bootstrap', 'fonts', 'fontawesome',]);
+    wp_enqueue_style('altruist', get_stylesheet_directory_uri() . '/assets/styles/main.css', []);
   }
 
-  wp_enqueue_script('altruist', get_stylesheet_directory_uri() . '/assets/scripts/main.js', ['bootstrap',], false, true);
+  wp_enqueue_script('altruist', get_stylesheet_directory_uri() . '/assets/scripts/main.js', [], false, true);
 });
+
+add_action('wp_enqueue_scripts', function () {
+  wp_deregister_script('jquery');
+}, 11);
 
 add_action('admin_init', function() {
   add_editor_style('css/editor-style.css');
