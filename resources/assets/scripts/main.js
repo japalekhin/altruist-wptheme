@@ -18,7 +18,8 @@ let vm = new Vue({
   methods: {
     calculateWindowScroll() {
       let h = document.documentElement, b = document.body, st = 'scrollTop', sh = 'scrollHeight';
-      this.scrollPercentage = ((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100) + '%';
+      let percentage = Math.max(0, Math.min(1, (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)));
+      this.scrollPercentage = (percentage * 100) + '%';
     },
     onWindowScroll() { this.calculateWindowScroll(); }
     // onWindowScroll: debounce(function () {
