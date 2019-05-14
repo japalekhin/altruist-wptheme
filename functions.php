@@ -23,10 +23,7 @@ add_action('init', function () {
 });
 
 add_action('wp_enqueue_scripts', function () {
-  if ($_SERVER['SERVER_ADDR'] !== '127.0.0.1') {
-    wp_enqueue_style('altruist', get_stylesheet_directory_uri() . '/assets/styles/main.css', []);
-  }
-
+  wp_enqueue_style('altruist', get_stylesheet_directory_uri() . '/assets/styles/main.css', []);
   wp_enqueue_script('altruist', get_stylesheet_directory_uri() . '/assets/scripts/main.js', [], false, true);
 });
 
