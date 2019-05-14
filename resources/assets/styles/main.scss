@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     position: absolute;
     top: 0;
+    transition: width .5s ease-in-out;
     &::after {
       background-color: rgba(46,213,115,.5);
       bottom: 0;
