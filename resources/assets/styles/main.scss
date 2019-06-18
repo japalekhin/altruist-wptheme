@@ -107,8 +107,6 @@ body.admin-bar #header {
         margin-left: -6rem;
         width: 18rem;
       }
-    }
-    .homePostImage {
       @media only screen and (min-width: 75rem) {
         margin-left: 0;
         max-width: none;
@@ -126,19 +124,6 @@ body.admin-bar #header {
         padding-top: 61.8%;
       }
     }
-    .homePostTitle {
-      font-size: 1.75rem;
-      font-weight: normal;
-      a {
-        color: inherit;
-        text-decoration: inherit;
-      }
-    }
-    .homePostSubtitle {
-      color: #757575;
-      font-family: 'Cabin', sans-serif;
-      font-size: 1.5rem;
-    }
     .homePostMeta {
       color: #757575;
       .homePostMetaItem {
@@ -149,6 +134,20 @@ body.admin-bar #header {
         color: inherit;
         text-decoration: inherit;
       }
+    }
+    .homePostTitle {
+      font-family: 'Lora', serif;
+      font-size: 1.25rem;
+      font-weight: normal;
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+    }
+    .homePostSubtitle {
+      color: #757575;
+      font-family: 'Cabin', sans-serif;
+      font-size: 1.5rem;
     }
   }
 }

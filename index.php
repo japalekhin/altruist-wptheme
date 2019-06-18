@@ -6,13 +6,9 @@
       <div class="homePost d-flex flex-column flex-md-row flex-xl-column align-items-center align-items-md-start my-5">
         <?php $imageURL = altruistGetHomePostImageURL(get_the_ID()); ?>
         <?php if ($imageURL != ''): ?>
-          <a href="<?php the_permalink(); ?>" style="background-image: url('<?php echo $imageURL; ?>');" class="homePostImage mb-2 mb-md-0 mb-xl-3 mr-md-4 mr-xl-0 flex-shrink-0 rounded"></a>
+          <a href="<?php the_permalink(); ?>" style="background-image: url('<?php echo $imageURL; ?>');" class="homePostImage mb-1 mb-md-0 mb-xl-1 mr-md-4 mr-xl-0 flex-shrink-0 rounded"></a>
         <?php endif; ?>
         <div class="homePostDetails">
-          <h2 class="homePostTitle">
-            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-          </h2>
-          <!-- <p class="homePostSubtitle">Subtitle</p> -->
           <div class="homePostMeta">
             <span class="homePostMetaItem">
               <i class="far fa-clock mr-1"></i>
@@ -30,6 +26,10 @@
               </span>
             <?php endif; ?>
           </div>
+          <h2 class="homePostTitle mt-2">
+            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+          </h2>
+          <!-- <p class="homePostSubtitle">Subtitle</p> -->
         </div>
       </div>
     <?php endwhile; ?>
