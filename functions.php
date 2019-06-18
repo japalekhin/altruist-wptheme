@@ -12,7 +12,9 @@ add_action('after_setup_theme', function() {
 
 // customizer functions
 require(get_stylesheet_directory() . '/inc/customizer/header.php');
+require(get_stylesheet_directory() . '/inc/customizer/home.php');
 
+// move scripts to footer
 add_action('init', function () {
   remove_action('wp_head', 'wp_print_scripts');
   remove_action('wp_head', 'wp_print_head_scripts', 9);
@@ -67,7 +69,13 @@ add_filter('the_content', function($content) {
 
 // *** functions
 
-// get cover image url
+// get frontpage cover image url
+function altruistGetFrontpageCoverImageUrl($imageId) {
+  $src = wp_get_attachment_image_src($imageId, 'full');
+  return $src[0];
+}
+
+// get post cover image url
 function altruistGetHomePostImageURL($postID) {
   $attachmentID = get_post_thumbnail_id();
   if ($attachmentID == 0) return '';
