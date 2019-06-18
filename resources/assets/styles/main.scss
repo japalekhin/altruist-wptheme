@@ -61,6 +61,21 @@ body.admin-bar #header {
   border-top: solid .1875rem #d2dae2;
 }
 
+/* front */
+#main .coverImage {
+  background-color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .coverSlogan {
+    color: #fff;
+    font-family: 'Cabin', sans-serif;
+    font-size: 2rem;
+    margin: 5rem;
+    text-align: center;
+  }
+}
+
 /* blog home */
 .homePosts {
   .homePost {
