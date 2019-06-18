@@ -151,4 +151,10 @@
         </nav>
       </header>
 
-      <main id="main">
+      <main id="main" :style="mainSectionStyle">
+        <?php if (is_front_page() && ($coverId = get_theme_mod('frontpageCover', 0)) > 0): ?>
+          <?php $frontpageCoverUrl = altruistGetFrontpageCoverImageUrl($coverId); ?>
+          <div class="coverImage d-flex flex-row align-items-center justify-content-center" style="background-image: url('<?php echo $frontpageCoverUrl; ?>');" :style="frontpageCoverStyle">
+            <p class="coverSlogan"><?php echo get_bloginfo('description'); ?></p>
+          </div>
+        <?php endif; ?>
