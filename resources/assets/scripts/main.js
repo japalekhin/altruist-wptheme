@@ -35,17 +35,6 @@ let vm = new Vue({
     window.removeEventListener('scroll', this.onWindowScroll);
   },
   methods: {
-    calculateWindowDimensions() {
-      if (this.headerElement === null) {
-        this.headerElement = document.getElementById('header');
-      }
-      this.windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-      this.headerHeight = this.getElementOuterHeight(this.headerElement);
-      this.headerHeightWithMargin = this.getElementOuterHeight(this.headerElement, true);
-    },
-    calculateWindowResize: debounce(function () {
-      this.calculateWindowDimensions();
-    }, 30),
     calculateWindowScroll() {
       let h = document.documentElement, b = document.body, st = 'scrollTop', sh = 'scrollHeight';
       let percentage = Math.max(0, Math.min(1, (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)));
@@ -56,8 +45,12 @@ let vm = new Vue({
     //   this.calculateWindowScroll();
     // }, 30),
     onWindowResize() {
-      this.calculateWindowDimensions();
-      this.calculateWindowResize();
+      if (this.headerElement === null) {
+        this.headerElement = document.getElementById('header');
+      }
+      this.windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      this.headerHeight = this.getElementOuterHeight(this.headerElement);
+      this.headerHeightWithMargin = this.getElementOuterHeight(this.headerElement, true);
     },
     getElementOuterHeight(element, includeMargin) {
       includeMargin = !!includeMargin;
