@@ -1,8 +1,0 @@
-.idea
-.vs
-.vscode
-node_modules
-.cache-loader
-.log
-.map
-.DS_store

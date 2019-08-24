@@ -1,0 +1,296 @@
+@import "./overrides";
+@import "./fontawesome";
+@import "./mixins";
+@import "./fonts";
+@import "~bootstrap/scss/bootstrap";
+
+$footer-bg: $gray-200;
+
+body {
+  min-height: 100vh;
+  #app {
+    min-height: 100vh;
+  }
+  &.admin-bar {
+    min-height: calc(100vh - 46px);
+    @media (min-width: 783px) {
+      min-height: calc(100vh - 32px);
+    }
+    #app {
+      min-height: calc(100vh - 46px);
+      @media (min-width: 783px) {
+        min-height: calc(100vh - 32px);
+      }
+    }
+  }
+}
+
+.font-copy {
+  @include font-copy();
+}
+
+.site {
+  $site: &;
+  .siteHeader {
+    .featuredSocialLinks {
+      i.fab {
+        font-size: 2rem;
+        @include media-breakpoint-up(lg) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+    .patreonLink {
+      .patreonButton {
+        background-image: url("../img/button-patreon.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-size: 0;
+        width: 10rem;
+        @include aspect-ratio(200, 47);
+      }
+    }
+  }
+  &.admin-bar .siteHeader {
+    margin-top: 46px;
+    @media (min-width: 783px) {
+      margin-top: 32px;
+    }
+  }
+  .siteBody {
+    margin-top: 3.75rem;
+  }
+  .indexPage {
+    .posts {
+      max-width: 45rem;
+      .postPreview {
+        .image {
+          background-color: $gray-400;
+          max-height: 8rem;
+          position: relative;
+          width: 8rem;
+          @include media-breakpoint-down(xs) {
+            float: right;
+            height: 8rem;
+            margin-bottom: 1rem;
+          }
+          @include media-breakpoint-up(md) {
+            max-height: none;
+            width: 12rem;
+          }
+          .imageContainer {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+        .details {
+          flex-basis: auto;
+          .header {
+            .title {
+              color: inherit;
+              font-size: 1.25rem;
+              font-weight: 500;
+              text-decoration: inherit;
+              a {
+                text-decoration: inherit;
+              }
+            }
+            .excerpt {
+              color: $gray-600;
+              font-size: 0.875rem;
+              p {
+                margin: 0;
+              }
+            }
+          }
+          .meta {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  .singlePost {
+    $singlePost: &;
+    .cover {
+      background-color: $dark;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      .container {
+        background-color: rgba($dark, 0.9);
+        max-width: 54rem;
+        .title {
+          font-size: 1.3125rem;
+          @include media-breakpoint-up(md) {
+            font-size: 1.5rem;
+          }
+          @include media-breakpoint-up(md) {
+            font-size: 1.75rem;
+          }
+          @include media-breakpoint-up(xl) {
+            font-size: 2rem;
+          }
+        }
+        .meta {
+          a {
+            color: inherit;
+            text-decoration: inherit;
+          }
+        }
+      }
+    }
+    &.hasImage .cover {
+      min-height: 61.8vh;
+    }
+    .content {
+      @include copy-section();
+    }
+    footer.comments {
+      background-color: $gray-100;
+      background: linear-gradient(0deg, $footer-bg 0%, rgba($gray-200, 0) 100%);
+    }
+  }
+  .singlePage {
+    .pageContent {
+      max-width: 45rem;
+      .pageHeader {
+        .pageCover {
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          @include aspect-ratio(16, 9);
+        }
+      }
+      .content {
+        @include copy-section();
+      }
+    }
+  }
+  .sidebar {
+    position: relative;
+    @include media-breakpoint-up(lg) {
+      margin-left: 3rem;
+      width: 20rem;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 25rem;
+    }
+    .sticker {
+      top: 5.75rem;
+      position: sticky;
+    }
+    .samplepromo {
+      background-color: pink;
+      height: 70vh;
+    }
+  }
+
+  // mailing list subscribe form
+  .mailingListSubscribeForm {
+    background-color: $primary;
+    color: #fff;
+    .formElements {
+      .textBoxes {
+        margin-bottom: 2rem;
+        @include media-breakpoint-up(md) {
+          margin-bottom: 0.5rem;
+        }
+      }
+      .submitContainer {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+  .singlePost .mailingListSubscribeForm {
+    padding: 2rem 1.5rem;
+    @include media-breakpoint-up(md) {
+      .formElements {
+        @include media-breakpoint-up(lg) {
+          display: flex;
+          flex-direction: row;
+        }
+        .textBoxes {
+          display: flex;
+          flex-direction: row;
+          @include media-breakpoint-up(lg) {
+            flex-grow: 1;
+          }
+          .form-group {
+            width: 50%;
+            &.nameFormGroup {
+              margin-right: 0.5rem;
+            }
+            &.emailFormGroup {
+              margin-left: 0.5rem;
+            }
+          }
+        }
+        .submitContainer {
+          @include media-breakpoint-up(lg) {
+            margin-left: 1rem;
+            margin-top: 1.75rem;
+          }
+        }
+      }
+    }
+  }
+  .sidebar .mailingListSubscribeForm {
+    padding: 2rem 1.5rem;
+    @include media-breakpoint-up(xl) {
+      padding: 2rem 2rem;
+    }
+    .formElements {
+      .textBoxes {
+        @include media-breakpoint-up(md) {
+          display: flex;
+          flex-direction: row;
+          .form-group {
+            width: 50%;
+            @include media-breakpoint-up(lg) {
+              width: auto;
+            }
+            &.nameFormGroup {
+              margin-right: 0.5rem;
+              @include media-breakpoint-up(lg) {
+                margin-right: 0;
+              }
+            }
+            &.emailFormGroup {
+              margin-left: 0.5rem;
+              @include media-breakpoint-up(lg) {
+                margin-left: 0;
+              }
+            }
+          }
+          @include media-breakpoint-up(lg) {
+            display: block;
+            margin-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .siteFooter {
+    background-color: $footer-bg;
+    color: $gray-700;
+    font-size: 0.75rem;
+    a {
+      color: inherit;
+      font-style: inherit;
+    }
+  }
+
+  // amazon ads
+  .amzn-native-header {
+    display: none;
+  }
+}
