@@ -11812,6 +11812,42 @@ body {
 .site .amzn-native-header {
   display: none; }
 
+.subscribeFlasher[data-v-6c783a3a] {
+  position: relative;
+}
+.subscribeFlasher .flasher[data-v-6c783a3a] {
+    bottom: 0;
+    height: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+}
+.subscribeFlasher .flasher[data-v-6c783a3a]::before {
+      background-color: rgba(255, 255, 255, 0.4);
+      bottom: -1.5rem;
+      border-radius: 999rem;
+      content: "";
+      display: block;
+      left: -1.5rem;
+      height: 3rem;
+      position: absolute;
+      right: -1.5rem;
+      top: -1.5rem;
+      transform: scale(0);
+      width: 3rem;
+}
+.subscribeFlasher .flasher.flash[data-v-6c783a3a]::before {
+      background-color: rgba(255, 255, 255, 0);
+      transform: scale(1);
+      transition: all 1s ease-in;
+}
+.subscribeFlasher i[data-v-6c783a3a] {
+    position: relative;
+}
+
 .mailingListSubscribeForm .title[data-v-5e55d2d8] {
   font-size: 1.5rem;
   line-height: 1.2;
