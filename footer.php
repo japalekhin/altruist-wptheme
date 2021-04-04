@@ -18,7 +18,6 @@
     </div>
   </div>
   <?php wp_footer(); ?>
-  <script type="text/javascript" src="https://platform.foremedia.net/code/485/analytics"></script>
 </body>
 
 </html>
