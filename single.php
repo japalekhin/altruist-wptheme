@@ -15,12 +15,12 @@
           <?php echo $readTime; ?> minute<?php echo ($readTime == 1 ? '' : 's'); ?>
         </div>
         <?php if (comments_open()) : ?>
-        <div class="comments me-3">
-          <i class="fas fa-comments"></i>
-          <span class="commentsLink homePostMetaItem">
-            <?php comments_popup_link(__('Comment', 'altruist'), __('1 Comment', 'altruist'), __('% Comments', 'altruist')); ?>
-          </span>
-        </div>
+          <div class="comments me-3">
+            <i class="fas fa-comments"></i>
+            <span class="commentsLink homePostMetaItem">
+              <?php comments_popup_link(__('Comment', 'altruist'), __('1 Comment', 'altruist'), __('% Comments', 'altruist')); ?>
+            </span>
+          </div>
         <?php endif; ?>
         <!--div class="categories">categories</div-->
       </div>
@@ -34,11 +34,11 @@
     </div>
   </div>
   <?php if (get_post_status(get_the_ID()) == 'publish') : ?>
-  <footer class="comments py-5">
-    <div class="container">
-      <?php comments_template('', true); ?>
-    </div>
-  </footer>
+    <footer class="comments py-5">
+      <div class="container">
+        <?php comments_template('', true); ?>
+      </div>
+    </footer>
   <?php endif; ?>
 </div>
 <?php get_footer();

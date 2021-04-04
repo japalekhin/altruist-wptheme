@@ -9,14 +9,14 @@
     <div class="message alert" :class="messageClass" v-if="message.isVisible">{{ message.message }}</div>
     <div class="formElements">
       <div class="textBoxes">
-        <div class="nameFormGroup mb-2">
-          <label for="txtName">
+        <div class="nameFormGroup formGroup mb-2">
+          <label for="txtName" class="mb-1">
             <small>Name</small>
           </label>
           <input type="text" class="form-control rounded-sm" id="txtName" name="name" placeholder="Enter your name" required :disabled="isSubmitting" v-model="form.name" />
         </div>
-        <div class="emailFormGroup mb-2">
-          <label for="txtEmail">
+        <div class="emailFormGroup formGroup mb-2">
+          <label for="txtEmail" class="mb-1">
             <small>Email address</small>
           </label>
           <input type="email" class="form-control rounded-sm" id="txtEmail" placeholder="Enter email" required :disabled="isSubmitting" v-model="form.email" />

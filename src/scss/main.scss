@@ -58,7 +58,7 @@ body {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: .5rem;
+        border-radius: 0.5rem;
         font-size: 0;
         width: 10rem;
         @include aspect-ratio(230, 60);
@@ -232,6 +232,7 @@ body {
         @include media-breakpoint-up(lg) {
           display: flex;
           flex-direction: row;
+          align-items: center;
         }
         .textBoxes {
           display: flex;
@@ -239,7 +240,7 @@ body {
           @include media-breakpoint-up(lg) {
             flex-grow: 1;
           }
-          .form-group {
+          .formGroup {
             width: 50%;
             &.nameFormGroup {
               margin-right: 0.5rem;
@@ -252,7 +253,7 @@ body {
         .submitContainer {
           @include media-breakpoint-up(lg) {
             margin-left: 1rem;
-            margin-top: 1.75rem;
+            margin-top: 1.5rem;
           }
         }
       }
