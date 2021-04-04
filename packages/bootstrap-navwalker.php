@@ -27,6 +27,11 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 	 * @extends Walker_Nav_Menu
 	 */
 	class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+		private $isOnRight = false;
+
+		public function __construct($isOnRight = false) {
+			$this->isOnRight = $isOnRight;
+		}
 
 		/**
 		 * Starts the list before the elements are added.
@@ -50,6 +55,9 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			$indent = str_repeat( $t, $depth );
 			// Default class to add to the file.
 			$classes = array( 'dropdown-menu' );
+			if ($this->isOnRight) {
+				$classes[] = 'dropdown-menu-right';
+			}
 			/**
 			 * Filters the CSS class(es) applied to a menu list element.
 			 *
@@ -183,7 +191,7 @@ if ( ! class_exists( 'WP_Bootstrap_Navwalker' ) ) {
 			// If item has_children add atts to <a>.
 			if ( isset( $args->has_children ) && $args->has_children && 0 === $depth && $args->depth > 1 ) {
 				$atts['href']          = '#';
-				$atts['data-toggle']   = 'dropdown';
+				$atts['data-bs-toggle']   = 'dropdown';
 				$atts['aria-haspopup'] = 'true';
 				$atts['aria-expanded'] = 'false';
 				$atts['class']         = 'dropdown-toggle nav-link';

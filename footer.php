@@ -12,11 +12,13 @@
       <?php ob_end_clean(); ?>
       <footer class="siteFooter pt-3 pb-4 mt-auto">
         <div class="container text-center">
-          © 1987–2019 <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>. All rights reserved.
+          © <?php echo date('Y'); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>. All rights reserved.
         </div>
       </footer>
     </div>
-  </div> <?php wp_footer(); ?>
+  </div>
+  <?php wp_footer(); ?>
+  <script type="text/javascript" src="https://platform.foremedia.net/code/485/analytics"></script>
 </body>
 
 </html>

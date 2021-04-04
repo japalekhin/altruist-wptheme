@@ -1,7 +1,7 @@
 <template>
-  <span class="subscribeFlasher mr-2">
+  <span class="subscribeFlasher">
     <span class="flasher" :class="flasherClass"></span>
-    <i class="fas fa-bell fa-fw"></i>
+    <i class="bellIcon fas fa-bell fa-fw" :class="ringerClass"></i>
   </span>
 </template>
 
@@ -10,25 +10,51 @@ export default {
   name: "subscribe-flasher",
   data() {
     return {
-      flasherClass: []
+      flasherClass: [],
+      ringerClass: []
     };
   },
   created() {
     this.flash();
+    this.ring();
   },
   methods: {
     flash() {
       this.flasherClass = [];
-      window.setTimeout(() => {
-        this.flasherClass.push("flash");
-      }, 0);
-      window.setTimeout(this.flash, 3000 + Math.random() * 6000);
+      window.setTimeout(() => this.flasherClass.push("flash"), 0);
+      window.setTimeout(this.flash, 2000 + Math.random() * 3000);
+    },
+    ring() {
+      this.ringerClass = [];
+      window.setTimeout(() => this.ringerClass.push("ring"), 0);
+      window.setTimeout(this.ring, 1000 + Math.random() * 5000);
     }
   }
 };
 </script>
 
 <style lang="scss" scoped>
+@keyframes ring {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
 .subscribeFlasher {
   position: relative;
   .flasher {
@@ -60,8 +86,11 @@ export default {
       transition: all 1s ease-in;
     }
   }
-  i {
+  .bellIcon {
     position: relative;
+    &.ring {
+      animation: ring 0.5s;
+    }
   }
 }
 </style>

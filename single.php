@@ -5,17 +5,17 @@
     <div class="container text-white mt-auto p-3">
       <h2 class="title text-center"><?php the_title(); ?></h2>
       <div class="meta d-flex flex-row flex-wrap justify-content-center">
-        <div class="time mr-3">
+        <div class="time me-3">
           <i class="fas fa-clock"></i>
           <?php the_time('D, F j, Y'); ?>
         </div>
-        <div class="read mr-3">
+        <div class="read me-3">
           <?php $readTime = altruistGetReadLength(get_the_ID()); ?>
           <i class="fas fa-glasses"></i>
           <?php echo $readTime; ?> minute<?php echo ($readTime == 1 ? '' : 's'); ?>
         </div>
         <?php if (comments_open()) : ?>
-        <div class="comments mr-3">
+        <div class="comments me-3">
           <i class="fas fa-comments"></i>
           <span class="commentsLink homePostMetaItem">
             <?php comments_popup_link(__('Comment', 'altruist'), __('1 Comment', 'altruist'), __('% Comments', 'altruist')); ?>
@@ -31,8 +31,6 @@
       <div class="mb-5">
         <?php the_content(); ?>
       </div>
-      <div id="amzn-assoc-ad-22afcbe1-7e23-4fc6-b563-2305bf4c07be"></div>
-      <script2 async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=22afcbe1-7e23-4fc6-b563-2305bf4c07be"></script2>
     </div>
   </div>
   <?php if (get_post_status(get_the_ID()) == 'publish') : ?>

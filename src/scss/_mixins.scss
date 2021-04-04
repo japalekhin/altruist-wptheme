@@ -14,7 +14,6 @@
 @mixin copy-section() {
   line-height: 1.618033988749895;
   margin: auto;
-  max-width: 46rem;
   overflow: hidden;
   @include media-breakpoint-up(md) {
     font-size: 1.125rem;

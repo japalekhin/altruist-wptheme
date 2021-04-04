@@ -41,6 +41,7 @@ body {
       }
     }
     .patreonLink {
+      display: none;
       .patreonButton {
         background-image: url("../img/button-patreon.png");
         background-position: center;
@@ -49,6 +50,18 @@ body {
         font-size: 0;
         width: 10rem;
         @include aspect-ratio(200, 47);
+      }
+    }
+    .buyMeACoffeeLink {
+      .buyMeACoffeeButton {
+        background-image: url("../img/button-buy-me-a-coffee.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: .5rem;
+        font-size: 0;
+        width: 10rem;
+        @include aspect-ratio(230, 60);
       }
     }
   }
@@ -63,7 +76,7 @@ body {
   }
   .indexPage {
     .posts {
-      max-width: 45rem;
+      // max-width: 45rem;
       .postPreview {
         .image {
           background-color: $gray-400;
@@ -152,6 +165,7 @@ body {
     }
     .content {
       @include copy-section();
+      max-width: 56rem;
     }
     footer.comments {
       background-color: $gray-100;
@@ -160,7 +174,7 @@ body {
   }
   .singlePage {
     .pageContent {
-      max-width: 45rem;
+      // max-width: 45rem;
       .pageHeader {
         .pageCover {
           background-position: center;
@@ -178,18 +192,20 @@ body {
     position: relative;
     @include media-breakpoint-up(lg) {
       margin-left: 3rem;
-      width: 20rem;
+      width: 16rem;
     }
-    @include media-breakpoint-up(xl) {
-      width: 25rem;
-    }
+    // @include media-breakpoint-up(xl) {
+    //   width: 25rem;
+    // }
     .sticker {
       top: 5.75rem;
       position: sticky;
-    }
-    .samplepromo {
-      background-color: pink;
-      height: 70vh;
+      .widget {
+        &.sample {
+          background-color: pink;
+          height: 20rem;
+        }
+      }
     }
   }
 
@@ -287,10 +303,5 @@ body {
       color: inherit;
       font-style: inherit;
     }
-  }
-
-  // amazon ads
-  .amzn-native-header {
-    display: none;
   }
 }

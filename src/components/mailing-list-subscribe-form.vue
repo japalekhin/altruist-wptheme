@@ -1,47 +1,25 @@
 <template>
-  <form
-    class="mailingListSubscribeForm rounded shadow"
-    :disabled="isSubmitting"
-    novalidate
-    @submit.prevent="onSubmit"
-  >
+  <form class="mailingListSubscribeForm rounded shadow" :disabled="isSubmitting" novalidate @submit.prevent="onSubmit">
     <div class="title font-copy mb-3">Like what you just read?</div>
     <div class="action mb-3">
-      <subscribe-flasher v-if="!isSubmitting"></subscribe-flasher>
-      <subscribe-loader v-if="isSubmitting"></subscribe-loader>
+      <subscribe-flasher class="me-1" v-if="!isSubmitting"></subscribe-flasher>
+      <subscribe-loader class="me-1" v-if="isSubmitting"></subscribe-loader>
       <span>Subscribe to receive updates when new content is available.</span>
     </div>
     <div class="message alert" :class="messageClass" v-if="message.isVisible">{{ message.message }}</div>
     <div class="formElements">
       <div class="textBoxes">
-        <div class="nameFormGroup form-group">
+        <div class="nameFormGroup mb-2">
           <label for="txtName">
             <small>Name</small>
           </label>
-          <input
-            type="text"
-            class="form-control rounded-sm"
-            id="txtName"
-            name="name"
-            placeholder="Enter your name"
-            required
-            :disabled="isSubmitting"
-            v-model="form.name"
-          />
+          <input type="text" class="form-control rounded-sm" id="txtName" name="name" placeholder="Enter your name" required :disabled="isSubmitting" v-model="form.name" />
         </div>
-        <div class="emailFormGroup form-group">
+        <div class="emailFormGroup mb-2">
           <label for="txtEmail">
             <small>Email address</small>
           </label>
-          <input
-            type="email"
-            class="form-control rounded-sm"
-            id="txtEmail"
-            placeholder="Enter email"
-            required
-            :disabled="isSubmitting"
-            v-model="form.email"
-          />
+          <input type="email" class="form-control rounded-sm" id="txtEmail" placeholder="Enter email" required :disabled="isSubmitting" v-model="form.email" />
         </div>
       </div>
       <div class="submitContainer d-flex flex-column align-items-stretch">
@@ -49,10 +27,7 @@
       </div>
     </div>
     <div>
-      <small class="form-text">
-        <i class="fas fa-thumbs-up mr-2"></i> I'll
-        <strong>never</strong> share your email with anyone.
-      </small>
+      <small class="form-text"> <i class="fas fa-thumbs-up me-2"></i> I'll <strong>never</strong> share your email with anyone. </small>
     </div>
   </form>
 </template>
@@ -123,23 +98,15 @@ export default {
           "Content-Type": "application/json"
         }
       })
-        .catch(() =>
-          this.showMessage(
-            "Network error! Are you connected to the internet?",
-            "warning"
-          )
-        )
+        .catch(() => this.showMessage("Network error! Are you connected to the internet?", "warning"))
         .finally(() => (this.isSubmitting = false))
-        .then(result => {
+        .then((result) => {
           if (!result.ok || result.status !== 200) {
-            return this.showMessage(
-              "An error occurred in the server!",
-              "danger"
-            );
+            return this.showMessage("An error occurred in the server!", "danger");
           }
           return result.json();
         })
-        .then(message => {
+        .then((message) => {
           if (typeof message === "undefined") {
             return;
           }
@@ -151,10 +118,7 @@ export default {
           if (message == "already_subscribed") {
             this.form.name = "";
             this.form.email = "";
-            return this.showMessage(
-              "It seems you're already subscribed! Thank you.",
-              "info"
-            );
+            return this.showMessage("It seems you're already subscribed! Thank you.", "info");
           }
           return this.showMessage(message, "danger");
         });

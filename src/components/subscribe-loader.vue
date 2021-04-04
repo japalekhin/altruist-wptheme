@@ -1,5 +1,5 @@
 <template>
-  <i class="fas fa-cog fa-fw fa-spin mr-2"></i>
+  <i class="fas fa-cog fa-fw fa-spin"></i>
 </template>
 
 <script>
